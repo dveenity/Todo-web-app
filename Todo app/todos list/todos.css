@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lilita One", sans-serif;
+}
+
+body {
+  background-color: rgb(125, 125, 255);
+  height: 100dvh;
+  min-height: 370px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.box1 {
+  border-radius: 0.5rem;
+  min-height: 60px;
+  height: 10vh;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  margin-bottom: 3em;
+  background-color: white;
+  box-shadow: 2px 0px 10px rgb(120, 120, 255);
+}
+
+.box1 input {
+  width: 50vw;
+  height: 2em;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid silver;
+  font-size: 1.2em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.box1 button {
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(121, 121, 255);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+
+.box2 {
+  background-color: white;
+  color: black;
+  height: 50vh;
+  min-height: 15rem;
+  width: 90vw;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.box2 ul {
+  position: relative;
+}
+
+.box2 ul li {
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.box2 ul li::before {
+  content: "";
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  background-image: url(../images/unchecked.png);
+  background-position: center;
+  background-size: cover;
+  margin-right: 0.5rem;
+}
+
+.box2 ul li span {
+  position: absolute;
+  font-size: 3rem;
+  right: 0;
+  color: red;
+  padding: 0 1rem;
+}
+
+span:hover {
+  background-color: rgb(221, 221, 221);
+  border-radius: 50%;
+}
+
+/* toggle */
+.box2 ul li.checked {
+  text-decoration: line-through;
+  color: rgb(83, 83, 255);
+}
+.box2 ul li.checked::before {
+  background-image: url(../images/checked.png);
+}
