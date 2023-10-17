@@ -36,7 +36,7 @@ function savingList() {
   displayData();
 }
 function displayData() {
-  const savedData = localStorage.getItem("data");
-  box.innerHTML = savedData;
+  let save = localStorage.getItem("data");
+  listing.innerHTML = save;
 }
 window.onload = displayData;
