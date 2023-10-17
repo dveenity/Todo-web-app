@@ -1,5 +1,6 @@
 let inserting = document.getElementById("inserting");
 let listing = document.querySelector(".listing");
+let box = document.querySelector(".box2");
 
 function addTask() {
   if (inserting.value === "") {
@@ -13,6 +14,7 @@ function addTask() {
     newTd.appendChild(span);
   }
   inserting.value = "";
+  savingList();
 }
 
 listing.addEventListener(
@@ -20,9 +22,21 @@ listing.addEventListener(
   function (e) {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
+      savingList();
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
+      savingList();
     }
   },
   false
 );
+
+function savingList() {
+  localStorage.setItem("data", box.innerHTML);
+}
+
+function showList() {
+  box.innerHTML = localStorage.getItem("data");
+}
+
+showList();
