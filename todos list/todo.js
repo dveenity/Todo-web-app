@@ -32,11 +32,11 @@ listing.addEventListener(
 );
 
 function savingList() {
-  localStorage.setItem("data", box.innerHTML);
+  localStorage.setItem("data", listing.innerHTML);
+  displayData();
 }
-
-function showList() {
-  box.innerHTML = localStorage.getItem("data");
+function displayData() {
+  const savedData = localStorage.getItem("data");
+  box.innerHTML = savedData;
 }
-
-showList();
+window.onload = displayData;
