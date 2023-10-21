@@ -2,6 +2,7 @@ let inserting = document.getElementById("inserting");
 let listing = document.querySelector(".listing");
 let box = document.querySelector(".box2");
 
+// add input value to todo list
 function addTask() {
   if (inserting.value === "") {
     alert("input something");
@@ -17,6 +18,7 @@ function addTask() {
   savingList();
 }
 
+// add listener to determine element clicked and run a function
 listing.addEventListener(
   "click",
   function (e) {
@@ -31,6 +33,7 @@ listing.addEventListener(
   false
 );
 
+// save todo list to user browser storage with localStorage
 function savingList() {
   localStorage.setItem("input", listing.innerHTML);
   displayData();
